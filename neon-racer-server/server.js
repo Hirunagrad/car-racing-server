@@ -110,5 +110,5 @@ io.on('connection', (socket) => {
     socket.on('disconnect', handleLeave);
 });
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => { console.log(`🚀 Lobby Server running on port ${PORT}`); });
